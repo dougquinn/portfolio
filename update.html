@@ -1,0 +1,180 @@
+<head>
+	<title>Douglas Quinn - Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+	<link href="includes/css/styles2.css" rel="stylesheet">
+	<script src="includes/js/modernizr-2.6.2.min.js"></script>
+</head>
+<html>
+	<body>
+		<div class="container" id ="main">
+			<div class="navbar navbar-fixed-top">
+				<div class="container">
+					<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="nav-collapse collapse navbar-responsive-collapse">
+						<ul class="nav navbar-nav pull-left">
+							<li>
+								<p id="name">&nbsp;Douglas Quinn&nbsp;&nbsp;&nbsp;&nbsp;</p>
+							</li>
+							<li class="active">
+								<a href="home.html" id="home">Home</a>
+							</li>
+							<li class="dropdown">
+								<a href="home.html" class="dropdown-toggle" data-toggle="dropdown">Portfolio&nbsp;&nbsp;&nbsp;<strong class="caret"></strong></a>
+								<ul class="dropdown-menu">
+									<li>
+                                        <a href="MAXXPotential.html">MAXX Potential</a>
+                                    </li>
+									<li>
+										<a href="random_numbers.html">Random Number</a>
+									</li>
+									<li class="divider"></li>
+									<li class="dropdown-header">Generate Lottery Numbers</li>
+									<li>
+										<a href="match_pick3.php" id="lottoForm">Pick 3</a>
+									</li>
+									<li>
+										<a href="match_pick4.php" id="lottoForm">Pick 4</a>
+									</li>
+									<li>
+										<a href="match_cash5.php" id="lottoForm">Cash 5</a>
+									</li>
+									<li>
+										<a href="match_mega.php" id="lottoForm">Mega Millions</a>
+									</li>
+									<li>
+										<a href="match_power.php" id="lottoForm">Powerball</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav pull-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;My Account&nbsp;&nbsp;&nbsp;<stong class="caret"></stong></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="update.html"><span class="glyphicon glyphicon-wrench">&nbsp;&nbsp;&nbsp;Update Profile</span></a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="logout.php"><span class="glyphicon glyphicon-off">&nbsp;&nbsp;&nbsp;Sign Out</span></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12">
+			    <div class="form">
+			        <form method="POST" action="update.php">
+			            <h3>Please select the information you would like to update</h3><br />
+            			<div class="checkbox">
+                            <input type="checkbox" onclick="Javascript: showUser()" onchange="updateValue(value)" name="checkUsername" />Username
+                            <input type="text" class="form-control" style="display:none" id="updateUsername" name="updateUsername" />
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" onclick="Javascript: showPass()" name="checkPassword" value="0" />Password
+                            <input type="text" class="form-control" style="display:none" id="updatePassword" name="updatePassword" />
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" onclick="Javascript: showFirst()" name="checkPhone" value="0" />First Name
+                            <input type="text" class="form-control" style="display:none" id="updateFirstName" name="updateFirstName" />
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" onclick="Javascript: showLast()" name="checkPhone" value="0" />Last Name
+                            <input type="text" class="form-control" style="display:none" id="updateLastName" name="updateLastName" />
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" onclick="Javascript: showEmail()" name="checkPhone" value="0" />Email
+                            <input type="text" class="form-control" style="display:none" id="updateEmail" name="updateEmail" />
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" onclick="Javascript: showPhone()" name="checkPhone" value="0" />Phone Number
+                            <input type="text" class="form-control" style="display:none" id="updatePhone" name="updatePhone" />
+                        </div>
+                        <div>
+                            <h4><br />Please enter your current username and password.</h4>
+                            <p>Username<input type="text" class="form-control" name="currentUsername" /></p>
+					        <p>Password<input type="text" class="form-control" name="currentPassword" /></p>
+                        </div>
+                        <div>
+    						<p class="loginButtons">
+    							<input type="submit" class="btn" value="Update Account" name ="create"/>
+    						</p>
+    					</div>
+    				</form>
+    			</div>
+    		</div>
+	    </div>
+		<script language="javascript">
+		    function updateValue(1) {
+		        document.getElementById("checkUsername").value = 1;
+		    }
+		    
+            function showUser() {
+              if (document.getElementById("updateUsername").style.display == "none") {
+                document.getElementById("updateUsername").style.display = '';
+              } 
+              else {
+                document.getElementById("updateUsername").style.display = 'none';
+              }
+            }
+            
+            function showPass() {
+              if (document.getElementById("updatePassword").style.display == "none") {
+                document.getElementById("updatePassword").style.display = '';
+              } 
+              else {
+                document.getElementById("updatePassword").style.display = 'none';
+              }
+            }
+            
+            function showFirst() {
+              if (document.getElementById("updateFirstName").style.display == "none") {
+                document.getElementById("updateFirstName").style.display = '';
+              } 
+              else {
+                document.getElementById("updateFirstName").style.display = 'none';
+              }
+            }
+            
+            function showLast() {
+              if (document.getElementById("updateLastName").style.display == "none") {
+                document.getElementById("updateLastName").style.display = '';
+              } 
+              else {
+                document.getElementById("updateLastName").style.display = 'none';
+              }
+            }
+            
+            function showEmail() {
+              if (document.getElementById("updateEmail").style.display == "none") {
+                document.getElementById("updateEmail").style.display = '';
+              } 
+              else {
+                document.getElementById("updateEmail").style.display = 'none';
+              }
+            }
+            
+            function showPhone() {
+              if (document.getElementById("updatePhone").style.display == "none") {
+                document.getElementById("updatePhone").style.display = '';
+              } 
+              else {
+                document.getElementById("updatePhone").style.display = 'none';
+              }
+            }
+        </script>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="includes/js/script.js"></script>
+	</body>
+</html>

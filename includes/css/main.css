@@ -1,0 +1,58 @@
+#main {
+    padding-top: 100px;
+    margin: auto;
+}
+
+#name {
+	font: 100px/1.5 "Pacifico", Helvetica, sans-serif;
+	color: #8fc1c1;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.6), 2px 2px 0px rgba(0,0,0,0.5), 3px 3px 0px rgba(0,0,0,0.4), 4px 4px 0px rgba(0,0,0,0.3), 5px 5px 0px rgba(0,0,0,0.2), 6px 6px 0px rgba(0,0,0,0.1);
+	text-align: center;
+}
+
+.form-control {
+    display: block;
+    margin: auto;
+}
+
+.loginButtons {
+    display: block;
+    margin: auto;
+}
+
+.form {
+	display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.btn {
+    width: 100%;
+}
+
+#noMatch {
+    font-size: 60px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #name {
+        font: 40px/1.5 "Pacifico", Helvetica, sans-serif;
+    }
+    
+    .form {
+        width: 100%;
+    }
+    
+    .form-width {
+        width: 100%;
+    }
+    
+    .form_control {
+        height: 30px;
+    }
+    
+    #noMatch {
+    font-size: 14px;
+}
+}
